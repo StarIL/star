@@ -1,0 +1,45 @@
+/*注册页面*/
+body{
+	background: #fff;
+}
+#retrievepassword{background: #fff;}
+.content{
+	height: 100%;
+	padding:12px
+}
+
+.mobileInpt{
+	background:url(../../images/wechat_login3.png) no-repeat left;
+	background-position:left 10px center;
+	background-size:20px 20px;
+	text-indent:20px;
+}
+.VerificationInpt{
+	background:url(../../images/wechat_login4.png) no-repeat left;
+	background-position:left 10px center;
+	background-size:20px 20px;
+	text-indent:20px;
+}
+.mui-input-row .VerificationInpt+.mui-icon{right:34%}
+
+.btnContent .mui-btn1{
+    width: 120px;
+    height: 40px;
+    display: inline-block;
+    float: right;
+    color: #fff;
+    background: #4481e6;
+}
+.binding{
+	text-align: center;
+	margin-top:60px;
+	margin-bottom: 30px;
+}
+.binding .bindingbtn{
+    color: #fff;
+    background: #007aff;
+}
+
+
+
+

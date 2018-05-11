@@ -1,0 +1,22 @@
+html,body{height:100%;width:100%}
+#billDetail{position:relative;height:auto;min-height:100%;padding-bottom:33px}	
+	/*顶部账户信息*/
+	.topContent{background:#4481e6;margin-bottom:15px}
+		.title{overflow:hidden;padding:10px 12px 0;border-bottom:1px dashed #7facf5;margin-bottom:10px}
+			.title p{color:#fff;font-size:16px}
+		.table-view{overflow:hidden;padding:0 12px}
+			.table-view p{color:#fff;font-size:16px}
+			.table-view p:first-of-type{color:#d5e8f9}
+			.billAlert{margin-left:15px;color:#fff}
+	/*中间账户具体信息*/
+			
+	.content{background:#fff;margin-bottom:15px}
+	#billDetail .content:last-of-type{margin-bottom:20px}
+		.content .title{overflow:hidden;padding:10px 12px 0;border-bottom:1px solid #ddd}
+			.content .title p{color:#666;font-size:16px}
+			.content .title p:last-of-type{color:#4481e6}
+			.order{margin-left:10px;color:#333}
+			.content .table-view p:first-of-type{color:#999}
+			.content .table-view p:last-of-type{color:#666}
+			.nameAlert{margin-left:15px;color:#fe7f32}
+		.confirmBtn{position:fixed;bottom:0;border-radius:0}	

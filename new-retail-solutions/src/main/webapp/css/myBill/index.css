@@ -1,0 +1,22 @@
+html,body{height:100%;width:100%}
+#myBill{height:100%}
+.mui-table-view{background:#efeff4}
+/*顶部导航*/
+.nav{background:#4481e6;color:#fff;text-align:center;font-size:16px;margin-bottom:15px;overflow:hidden;display:flex;display:-webkit-flex;-webkit-justify-content:space-around;justify-content:space-around;}
+	.nav li{border-bottom:5px solid #4481e6;padding:8px 0;}
+	.nav li.active{border-bottom:5px solid #fe7f32;}
+/*中间账单信息*/
+.billContent{background:#fff;margin-bottom:15px;}
+	.title{border-bottom:1px solid #ddd;padding:14px 12px;overflow:hidden;margin-bottom:15px}
+			.title li:first-of-type{font-size:18px;color:#333}
+			.title li:last-of-type{font-size:16px}		
+			.title li:last-of-type a {color:#4481e6}
+			.title li .mui-icon{color:#999;font-size:16px}
+	.billBox{overflow:hidden;padding:0 12px}		
+		.billBox p:first-of-type{color:#999;font-size:16px}
+		.billBox p:last-of-type{color:#333;font-size:16px}
+		.invoice{margin-left:15px;color:#fe7f32}
+		.billDate{margin-left:15px;color:#fe5950}
+		
+		.nameAlert{margin-left:15px;color:#fe7f32}
+		.billAlert{margin-left:15px;color:#fe5950}

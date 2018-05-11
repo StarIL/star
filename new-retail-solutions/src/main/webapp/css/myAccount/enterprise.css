@@ -1,0 +1,47 @@
+/*注册企业1页面*/
+body{
+	background: #fff;
+}
+#enterprise{background: #fff;}
+.content{
+	height: 100%;
+	padding:12px;
+	background: #fff;
+	margin-top: 50px;
+}
+
+.mobileInpt{
+	background:url(../../images/wechat_login3.png) no-repeat left;
+	background-position:left 10px center;
+	background-size:20px 20px;
+	text-indent:20px;
+}
+.VerificationInpt{
+	background:url(../../images/wechat_login4.png) no-repeat left;
+	background-position:left 10px center;
+	background-size:20px 20px;
+	text-indent:20px;
+}
+
+.btnContent .mui-btn1{
+    width: 120px;
+    height: 40px;
+    display: inline-block;
+    float: right;
+    color: #fff;
+    background: #4481e6;
+}
+.binding{
+	text-align: center;
+	margin-top:60px;
+	/*margin-bottom: 30px;*/
+	background: #4481e6;
+	
+}
+.binding .bindingbtn{
+    color: #fff;
+    background: #007aff;
+}
+
+.mui-input-row .VerificationInpt+.mui-icon{right:34%}
+

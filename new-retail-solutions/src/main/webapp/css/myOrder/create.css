@@ -1,0 +1,26 @@
+#placeOrder{background:none}
+#placeInfo,#placeSuccess{height:100%;padding-top:15px}
+.content{background:#fff;height:100%;}
+/*服务下单*/
+	.top{border-bottom:1px dashed #ddd;padding:0 0 18px;margin-bottom:15px}
+		.content .ui-choose li{border:1px solid #ddd;width:32%;margin-left:2%}
+		.content .ui-choose li:first-of-type{margin-left:0}
+		.content .ui-choose li.selected{color:#333}
+			.ui-choose li p{margin-bottom:0;margin-top:-6px}
+		#agentList li,#financeList li{width:49%;margin-left:2%}	
+		#agentList li:first-of-type,#financeList li:first-of-type{margin-left:0}
+	.table-view{padding:0 0 18px}	
+		.title{color:#666;font-size:15px}
+			.ui-choose li.noData{padding:12px 8px}
+	.orderBtn{text-align: center;padding:11px 12px;background:#007aff;height:auto;border-radius:none}		
+/*完善资料*/
+	#placeInfo .btnContent{position:absolute;bottom:15px;left:12px;right:12px;margin:auto;}
+	.placeBtn{margin-bottom:10px}
+/*下单成功*/
+.content dl{margin-top:30%;text-align:center}
+	.content dl dt{height:100px;width:100px;margin:0 auto;margin-bottom:15px}
+		.content dl dt img{height:100%;width:100%}
+		.content dl dd{margin-bottom:40px}
+			.content dl dd p:first-of-type{color:#333;font-size:18px}
+			.content dl dd p:last-of-type{font-size:16px}
+				.content dl dd p:last-of-type span{margin-left:10px;color:#666}
