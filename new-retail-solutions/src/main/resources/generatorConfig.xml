@@ -28,8 +28,8 @@
 		</commentGenerator>
 
 		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
-			connectionURL="jdbc:mysql://192.168.1.241:3306/swl_entrance" userId="root"
-			password="!Q@W#E$R" />
+			connectionURL="jdbc:mysql://sh-cdb-p41j1s69.sql.tencentcdb.com:63129/retail_solutions" userId="root"
+			password="shop_2018" />
 		<!-- java类型处理器 
 		        用于处理DB中的类型到Java中的类型，默认使用JavaTypeResolverDefaultImpl；
 		        注意一点，默认会先尝试使用Integer，Long，Short等来对应DECIMAL和 NUMERIC数据类型； 
@@ -50,24 +50,24 @@
         	targetPackage：生成的类要放的包，真实的包受enableSubPackages属性控制；
         	targetProject：目标项目，指定一个存在的目录下，生成的内容会放到指定目录中，如果目录不存在，MBG不会自动建目录
      	-->
-		<javaModelGenerator targetPackage="com.shiwulian.wechat.bean.bs"
-			targetProject="shiwulian-wechat/src/main/java">
+		<javaModelGenerator targetPackage="com.xhhxd.retail.bean.tm"
+			targetProject="retail-solutions/src/main/java">
 			<property name="enableSubPackages" value="true" />
 			<property name="trimStrings" value="true" />
 		</javaModelGenerator>
 
 		<!-- 生成映射文件的包名和位置 -->
-		<sqlMapGenerator targetPackage="mapper.bs" targetProject="shiwulian-wechat/src/main/resources">
+		<sqlMapGenerator targetPackage="mapper.tm" targetProject="retail-solutions/src/main/resources">
 			<property name="enableSubPackages" value="true" />
 		</sqlMapGenerator>
 
 		<!-- 生成DAO的包名和位置 -->
 		<javaClientGenerator type="XMLMAPPER" 
-			targetPackage="com.shiwulian.wechat.mapper.bs" targetProject="shiwulian-wechat/src/main/java">
+			targetPackage="com.xhhxd.retail.mapper.tm" targetProject="retail-solutions/src/main/java">
 			<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
 
-  <table tableName="bs_supplier" domainObjectName="Supplier" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> 
+  <table tableName="tm_team_member" domainObjectName="TmTeamMember" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> 
   <!-- <table tableName="od_order_delivery" domainObjectName="OrderDelivery" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" /> -->
 		
 	</context>

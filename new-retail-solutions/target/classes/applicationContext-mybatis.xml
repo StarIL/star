@@ -7,7 +7,7 @@
     http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
     http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd">
 
-	<!-- 定义数据源 -->
+	<!-- 定义数据源 dbcp -->
 	<bean id="dataSource" class="com.jolbox.bonecp.BoneCPDataSource"
 		destroy-method="close">
 		<!-- 数据库驱动 -->
@@ -27,11 +27,27 @@
 		<!-- 每个分区最小的连接数 -->
 		<property name="minConnectionsPerPartition" value="5" />
 	</bean>
-
+	<!-- 定义数据源  Hikari Datasource -->  
+	<bean id="dataSourceHikari" class="com.zaxxer.hikari.HikariDataSource">  
+		 <!-- <property name="driverClassName" value="${jdbc.driver}" /> --> <!-- 无需指定，除非系统无法自动识别 -->  
+		 <property name="jdbcUrl" value="${jdbc.url}" />  
+		 <property name="username" value="${jdbc.username}" />  
+		 <property name="password" value="${jdbc.password}" />  
+		  <!-- 连接只读数据库时配置为true， 保证安全 -->  
+		 <property name="readOnly" value="false" />  
+		 <!-- 等待连接池分配连接的最大时长（毫秒），超过这个时长还没可用的连接则发生SQLException， 缺省:30秒 -->  
+		 <property name="connectionTimeout" value="30000" />  
+		 <!-- 一个连接idle状态的最大时长（毫秒），超时则被释放（retired），缺省:10分钟 -->  
+		 <property name="idleTimeout" value="600000" />  
+		 <!-- 一个连接的生命时长（毫秒），超时而且没被使用则被释放（retired），缺省:30分钟，建议设置比数据库超时时长少30秒，参考MySQL wait_timeout参数（show variables like '%timeout%';） -->  
+		 <property name="maxLifetime" value="1800000" />  
+		 <!-- 连接池中允许的最大连接数。缺省值：10；推荐的公式：((core_count * 2) + effective_spindle_count) -->  
+		 <property name="maximumPoolSize" value="15" />  
+	</bean>  
 	<!--配置映射文件 -->
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<!-- 配置数据源 -->
-		<property name="dataSource" ref="dataSource" />
+		<property name="dataSource" ref="dataSourceHikari" />
 		<property name="configLocation" value="classpath:mybatis/mybatis-config.xml" />
 		<property name="mapperLocations" value="classpath:mapper/*/*.xml" />
 		<property name="plugins">
